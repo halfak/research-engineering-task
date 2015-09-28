@@ -33,6 +33,33 @@ If your solution works as we intend, you should be able to process the 5
 minute recording in less than 5 minutes and the output file will match the
 order of the input file.
 
+### Processing function ###
+
+It is just a simulated dummy function that takes up some amount of CPU for
+a pre-specified amount of time. The time to wait is in the 'wait' field
+of the change, and is log-normal distributed.
+
+In python:
+
+```
+def process_change(wait_secs):
+    start = time.time()
+    while time.time() - start < wait_secs:
+        time.sleep(0.001)
+    return change
+```
+
+In Java:
+
+```
+    private static void process_change(double wait_secs) throws InterruptedException {
+        double startTime = System.currentTimeMillis();
+        while( System.currentTimeMillis() - startTime < wait_secs * 1000 ) {
+            Thread.sleep(100);
+        }
+    }
+```
+
 ## Questions
 
 Please direct your questions to ahalfaker@wikimedia.org.
