@@ -49,7 +49,6 @@ def process_change(wait_secs):
     start = time.time()
     while time.time() - start < wait_secs:
         time.sleep(0.001)
-    return change
 ```
 
 In Java:
