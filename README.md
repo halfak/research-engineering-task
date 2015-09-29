@@ -26,8 +26,8 @@ to happen as close to realtime as possible while **preserving the order of
 events**. In a real-world environment, edit events would be produced from our
 [RCStream](https://wikitech.wikimedia.org/wiki/RCStream) service.  For this
 task, we provide a 5 minute recording of events in `sampled_rc.json`.  We also
-provide a functions (defined in python and Java) that
-implement a 1-10 seconds processing time.
+provide functions (defined in python and Java) that implement a 1-10 seconds
+processing time.
 
 If your solution works as we intend, you should be able to process the 5
 minute recording in less than 5 minutes and the output file will match the
