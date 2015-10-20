@@ -57,7 +57,7 @@ In Java:
     private static void process_change(double wait_secs) throws InterruptedException {
         double startTime = System.currentTimeMillis();
         while( System.currentTimeMillis() - startTime < wait_secs * 1000 ) {
-            Thread.sleep(100);
+            Thread.sleep(1);
         }
     }
 ```
